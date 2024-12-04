@@ -11,3 +11,14 @@ print("\nVector ordenado de manera descendente:")
 print(vector)
 print(f"El número mayor es: {mayor}")
 print(f"El número menor es: {menor}")
+
+Ejercicio Nelson primer
+import numpy as np
+
+def ingresar_vector(nombre):
+    return np.array(list(map(int, input(f"Ingrese los 3 elementos del {nombre}, separados por comas: ").split(','))))
+
+vector1 = ingresar_vector("primer vector")
+vector2 = ingresar_vector("segundo vector")
+resultado = vector1 + vector2
+print("La suma de los vectores es:", resultado)
