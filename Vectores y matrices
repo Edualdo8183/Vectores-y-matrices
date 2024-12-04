@@ -1,1 +1,13 @@
 Primer ejercici
+tamaño = int(input("Ingrese el tamaño del vector: "))
+vector = []
+for i in range(tamaño):
+    numero = int(input(f"Ingrese el número {i + 1}: "))
+    vector.append(numero)
+vector.sort(reverse=True)
+mayor = vector[0]
+menor = vector[-1]
+print("\nVector ordenado de manera descendente:")
+print(vector)
+print(f"El número mayor es: {mayor}")
+print(f"El número menor es: {menor}")
