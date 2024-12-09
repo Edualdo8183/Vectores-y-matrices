@@ -13,3 +13,32 @@ print(f"El número mayor es: {mayor}")
 print(f"El número menor es: {menor}")
 
 
+Ejercicio 2
+tamaño1 = int(input("Ingrese el tamaño del primer vector: "))
+vector1 = []
+for i in range(tamaño1):
+    numero1 = int(input(f"Ingrese el número {i + 1}: "))
+    vector1.append(numero1)  
+
+print("\nAhora ingrese los números del segundo vector:")
+tamaño2 = tamaño1
+vector2 = []
+for i in range(tamaño2):
+    numero2 = int(input(f"Ingrese el número {i + 1}: "))
+    vector2.append(numero2)  
+
+print("\nAhora ingrese los números del tercer vector:")
+tamaño3 = tamaño1
+vector3 = []
+for i in range(tamaño3):
+    numero3 = int(input(f"Ingrese el número {i + 1}: "))
+    vector3.append(numero3)
+
+print("\nPrimer vector:", vector1)
+print("Segundo vector:", vector2)
+print("Tercer vector:", vector3)
+
+resultado = list(map(sum, zip(vector1, vector2, vector3)))
+print("\nResultado de sumar los tres vectores:", resultado)
+
+Ejercicio 3:
