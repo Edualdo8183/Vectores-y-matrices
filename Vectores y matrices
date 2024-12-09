@@ -50,3 +50,27 @@ numero_mayor = max(lista)
 repeticiones = lista.count(numero_mayor)
 print(f"El número mayor es: {numero_mayor}")
 print(f"El número mayor se repite {repeticiones} veces.")
+
+Ejercicio 4
+numeros = [8, 3, 5, 12, 1, 7, 4, 2, 6]
+pares = []
+impares = []
+
+for numero in numeros:
+    if numero % 2 == 0:
+        pares.append(numero)
+    else:
+        impares.append(numero)
+
+for i in range(len(pares)):
+    for j in range(i + 1, len(pares)):
+        if pares[i] > pares[j]:
+            pares[i], pares[j] = pares[j], pares[i]
+
+for i in range(len(impares)):
+    for j in range(i + 1, len(impares)):
+        if impares[i] > impares[j]:
+            impares[i], impares[j] = impares[j], impares[i]
+
+print("Pares ordenados:", pares)
+print("Impares ordenados:", impares)
