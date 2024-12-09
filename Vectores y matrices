@@ -42,3 +42,11 @@ resultado = list(map(sum, zip(vector1, vector2, vector3)))
 print("\nResultado de sumar los tres vectores:", resultado)
 
 Ejercicio 3:
+n = int(input("Ingrese el tamaño de la lista (N): "))
+lista = []
+for i in range(n):
+    lista.append(int(input(f"Ingrese el número {i + 1}: ")))
+numero_mayor = max(lista)
+repeticiones = lista.count(numero_mayor)
+print(f"El número mayor es: {numero_mayor}")
+print(f"El número mayor se repite {repeticiones} veces.")
