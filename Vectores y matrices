@@ -1,4 +1,4 @@
-Primer ejercici
+Ejercicio 1 Vectores
 tamaño = int(input("Ingrese el tamaño del vector: "))
 vector = []
 for i in range(tamaño):
@@ -12,28 +12,4 @@ print(vector)
 print(f"El número mayor es: {mayor}")
 print(f"El número menor es: {menor}")
 
-Ejercicio 1
-import numpy as np
 
-def ingresar_vector(nombre):
-    return np.array(list(map(int, input(f"Ingrese los 3 elementos del {nombre}, separados por comas: ").split(','))))
-
-vector1 = ingresar_vector("primer vector")
-vector2 = ingresar_vector("segundo vector")
-resultado = vector1 + vector2
-print("La suma de los vectores es:", resultado)
-
-Ejercicio 2
-import numpy as np
-
-def transponer_matriz(matriz):
-    return np.transpose(matriz)
-
-filas = int(input("Número de filas: "))
-columnas = int(input("Número de columnas: "))
-
-matriz = [list(map(int, input(f"Fila {i + 1}: ").split())) for i in range(filas)]
-matriz_np = np.array(matriz)
-
-if input("¿Desea transponer la matriz? (sí/no): ").strip().lower() in ["sí", "si"]:
-    print(transponer_matriz(matriz_np))
