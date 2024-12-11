@@ -132,3 +132,11 @@ print(f"El promedio de ventas es {promedio_ventas}")
 print(f"El dia con mayor ventas de manzanas fue el dia {dia_ventas_maximas}")
 
 Ejercicio 3 extra
+precios = [50, 30, 20, 15, 10]
+
+precios_descuento = [precio * 0.8 for precio in precios]
+
+perdida_total = sum(precios) - sum(precios_descuento)
+
+print("Precios actualizados:", precios_descuento)
+print("Pérdida total:", perdida_total)
