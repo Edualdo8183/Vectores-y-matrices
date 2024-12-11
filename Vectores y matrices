@@ -95,3 +95,13 @@ impares.sort()
 print("Pares ordenados:", pares)
 print("Impares ordenados:", impares)
 
+Ejercicio 5
+n = int(input("Ingrese el número de elementos en la lista: "))
+
+lista = [int(input(f"Ingrese el valor {i+1}: ")) for i in range(n)]
+
+print("Lista completa:", lista)
+lista_resultante = [x for x in lista if x % 2 == 0]
+
+print("Lista resultante:", lista_resultante)
+
