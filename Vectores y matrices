@@ -129,4 +129,6 @@ dia_ventas_maximas = ventas.index(max(ventas)) + 1
 
 print(f"El total de venras es {total_ventas}")
 print(f"El promedio de ventas es {promedio_ventas}")
-print(f"El dia con mayor ventas de manzanas fue el dia {dia_ventas_maximas}") 
+print(f"El dia con mayor ventas de manzanas fue el dia {dia_ventas_maximas}")
+
+Ejercicio 3 extra
