@@ -116,3 +116,17 @@ producto_mayor_valor = productos[valores_totales.index(max(valores_totales))]
 
 print(valor_total_inventario)
 print(producto_mayor_valor) 
+
+Ejercicio 2 Extra
+ventas = []
+for i in range(5):
+    venta = float(input(f"Ingrese las ventas de ma manzana del día {i + 1}: "))
+    ventas.append(venta)
+
+total_ventas = sum(ventas)
+promedio_ventas = total_ventas / len(ventas)
+dia_ventas_maximas = ventas.index(max(ventas)) + 1
+
+print(f"El total de venras es {total_ventas}")
+print(f"El promedio de ventas es {promedio_ventas}")
+print(f"El dia con mayor ventas de manzanas fue el dia {dia_ventas_maximas}") 
