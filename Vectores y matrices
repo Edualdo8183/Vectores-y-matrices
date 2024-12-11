@@ -105,3 +105,14 @@ lista_resultante = [x for x in lista if x % 2 == 0]
 
 print("Lista resultante:", lista_resultante)
 
+Ejercicio 1 Extra
+productos = ["manzanas", "naranjas", "plátanos", "uvas", "peras"]
+precios = [10, 12, 8, 15, 9]
+cantidades = [50, 40, 60, 30, 45]
+
+valores_totales = [p * c for p, c in zip(precios, cantidades)]
+valor_total_inventario = sum(valores_totales)
+producto_mayor_valor = productos[valores_totales.index(max(valores_totales))]
+
+print(valor_total_inventario)
+print(producto_mayor_valor) 
