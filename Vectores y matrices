@@ -51,14 +51,13 @@ repeticiones = lista.count(numero_mayor)
 print(f"El número mayor es: {numero_mayor}")
 print(f"El número mayor se repite {repeticiones} veces.")
 
-Ejercicio 4 Seguir haciendo
-lista = int(input("Ingrese el tamaño de la lista: "))
+Ejercicio 4 Editar
+tamaño = int(input("Ingrese el tamaño de la lista: "))
 pares = []
 impares = []
-for i in range(lista):
-    numero = int(input(f"Ingrese el número {i + 1}: "))
 
-for numero in numeros:
+for i in range(tamaño):
+    numero = int(input(f"Ingrese el número {i + 1}: "))
     if numero % 2 == 0:
         pares.append(numero)
     else:
@@ -76,3 +75,23 @@ for i in range(len(impares)):
 
 print("Pares ordenados:", pares)
 print("Impares ordenados:", impares)
+
+
+Ejercocop 4 con sort: Editar
+tamaño = int(input("Ingrese el tamaño de la lista: "))
+pares = []
+impares = []
+
+for i in range(tamaño):
+    numero = int(input(f"Ingrese el número {i + 1}: "))
+    if numero % 2 == 0:
+        pares.append(numero)
+    else:
+        impares.append(numero)
+
+pares.sort()
+impares.sort()
+
+print("Pares ordenados:", pares)
+print("Impares ordenados:", impares)
+
