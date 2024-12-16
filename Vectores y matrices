@@ -157,4 +157,15 @@ for i in range(len(productos)):
     elif sucursal_2[i] > sucursal_1[i]:
         print(f"{productos[i]}: Sucursal 2")
     else:
-        print(f"{productos[i]}: Empate") 
+        print(f"{productos[i]}: Empate")
+
+Ejercicio 5 extra 
+precios_compra = [5, 7, 4, 10, 6]  
+precios_venta = [10, 12, 8, 15, 9]  
+unidades_vendidas = [20, 25, 30, 15, 10]  
+
+utilidad_por_producto = [(pv - pc) for pv, pc in zip(precios_venta, precios_compra)]  
+utilidad_total = sum([u * v for u, v in zip(utilidad_por_producto, unidades_vendidas)])  
+
+print(utilidad_por_producto)  
+print(utilidad_total) 
