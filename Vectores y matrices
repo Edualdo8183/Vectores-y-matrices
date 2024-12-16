@@ -169,3 +169,13 @@ utilidad_total = sum([u * v for u, v in zip(utilidad_por_producto, unidades_vend
 
 print(utilidad_por_producto)  
 print(utilidad_total) 
+
+Ejercicio 6 extra 
+inventario_actual = [15, 10, 5, 20, 8]
+nivel_minimo = 20
+
+faltantes = [max(nivel_minimo - x, 0) for x in inventario_actual]
+inventario_actualizado = [x + y for x, y in zip(inventario_actual, faltantes)]
+
+print(faltantes)
+print(inventario_actualizado) 
