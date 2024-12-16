@@ -140,3 +140,21 @@ perdida_total = sum(precios) - sum(precios_descuento)
 
 print("Precios actualizados:", precios_descuento)
 print("Pérdida total:", perdida_total)
+
+Ejercicio 4 extra 
+productos = ["manzanas", "naranjas", "plátanos", "uvas", "peras"]
+sucursal_1 = [30, 25, 40, 20, 35]
+sucursal_2 = [20, 30, 35, 25, 40]
+
+total_1 = sum(sucursal_1)
+total_2 = sum(sucursal_2)
+
+print("Sucursal 1" if total_1 > total_2 else "Sucursal 2" if total_2 > total_1 else "Empate")
+
+for i in range(len(productos)):
+    if sucursal_1[i] > sucursal_2[i]:
+        print(f"{productos[i]}: Sucursal 1")
+    elif sucursal_2[i] > sucursal_1[i]:
+        print(f"{productos[i]}: Sucursal 2")
+    else:
+        print(f"{productos[i]}: Empate") 
