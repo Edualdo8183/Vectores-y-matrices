@@ -1,0 +1,75 @@
+1. Revertir un vector
+a) 
+vector = [int(x) for x in input("Ingresa los elementos del vector separados por comas: ").split(",")]
+vector.reverse()
+print(vector)
+
+b)
+ vector = [int(x) for x in input().split(",")]
+invertido = vector[::-1]
+print(invertido)
+
+2. 
+vector = list(map(int, input("Ingrese un vector de números separados por espacios: ").split()))
+resultado = list(dict.fromkeys(vector))
+print("Lista sin duplicados:", resultado)
+
+3. 
+vector = list(map(int, input("Ingrese un vector de números separados por espacios: ").split()))
+numero = int(input("Ingrese un número para buscar: "))
+print("El número aparece:", vector.count(numero), "veces")
+
+4. 
+vector = list(map(int, input("Ingrese un vector de números separados por espacios: ").split()))
+suma_pares = sum(num for num in vector if num % 2 == 0)
+print("La suma de los números pares es:", suma_pares)
+
+5. 
+vector = list(map(int, input("Ingrese un vector de números separados por espacios: ").split()))
+cuadrados = [num ** 2 for num in vector]
+print("Vector de cuadrados:", cuadrados)
+
+6. 
+consumos_casa1 = list(map(int, input("Ingresa los consumos de la Casa 1 separados por espacio: ").split()))
+consumos_casa2 = list(map(int, input("Ingresa los consumos de la Casa 2 separados por espacio: ").split()))
+
+promedio_casa1 = sum(consumos_casa1) / len(consumos_casa1)
+promedio_casa2 = sum(consumos_casa2) / len(consumos_casa2)
+
+if promedio_casa1 > promedio_casa2:
+    print("Casa 1 consume mas")
+else:
+    print("Casa 2 consume mas")
+7. 
+entrada = input("Ingresa las calificaciones separadas por comas: ")
+calificaciones = list(map(int, entrada.split(",")))
+
+aprobados = [nota for nota in calificaciones if nota >= 60]
+reprobados = [nota for nota in calificaciones if nota < 60]
+
+print("Aprobados:", aprobados)
+print("Reprobados:", reprobados)
+
+
+8.
+tareas = eval(input("Ingresa las tareas como lista de listas, por ejemplo: [[3, 'baja'], [1, 'alta'], [4, 'alta'], [2, 'baja']]: "))
+tareas.sort(key=lambda x: (x[1] != 'alta', x[0]))
+print(tareas)
+
+9.
+planeado = list(map(int, input("Ingresa los gastos planeados separados por comas: ").split(",")))
+real = list(map(int, input("Ingresa los gastos reales separados por comas: ").split(",")))
+
+ajuste = [r - p for p, r in zip(planeado, real)]
+print("Excedente/Ahorro por categoría:", ajuste)
+
+10.
+tareas = list(map(int, input("Duración de tareas (separadas por coma): ").split(',')))
+personas = list(map(int, input("Personas asignadas (separadas por coma): ").split(',')))
+
+resultado = {}
+for tarea, persona in zip(tareas, personas):
+    resultado[persona] = resultado.get(persona, 0) + tarea
+
+for persona, horas in resultado.items():
+    print(f"Persona {persona}: {horas} horas")
