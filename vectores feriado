@@ -75,9 +75,9 @@ for persona, horas in resultado.items():
     print(f"Persona {persona}: {horas} horas")
 
 
-categorias = ["frutas", "verduras", "lácteos"]
-precios_promedio = [15, 10, 20]
-ventas_promedio = [50, 40, 30]
+categorias = input("Ingrese las categorías separadas por comas: ").split(",")
+precios_promedio = list(map(int, input("Ingrese los precios promedio separados por comas: ").split(",")))
+ventas_promedio = list(map(int, input("Ingrese las ventas promedio separadas por comas: ").split(",")))
 
 ingresos = [precios_promedio[i] * ventas_promedio[i] for i in range(len(categorias))]
 
@@ -85,4 +85,4 @@ for i in range(len(categorias)):
     print(f"Ingreso por {categorias[i]}: {ingresos[i]}")
 
 categoria_mas_ingresos = categorias[ingresos.index(max(ingresos))]
-print(f"La categoría que genera más ingresos es: {categoria_mas_ingresos}") 
+print(f"La categoría que genera más ingresos es: {categoria_mas_ingresos}")
