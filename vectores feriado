@@ -73,3 +73,16 @@ for tarea, persona in zip(tareas, personas):
 
 for persona, horas in resultado.items():
     print(f"Persona {persona}: {horas} horas")
+
+
+categorias = ["frutas", "verduras", "lácteos"]
+precios_promedio = [15, 10, 20]
+ventas_promedio = [50, 40, 30]
+
+ingresos = [precios_promedio[i] * ventas_promedio[i] for i in range(len(categorias))]
+
+for i in range(len(categorias)):
+    print(f"Ingreso por {categorias[i]}: {ingresos[i]}")
+
+categoria_mas_ingresos = categorias[ingresos.index(max(ingresos))]
+print(f"La categoría que genera más ingresos es: {categoria_mas_ingresos}") 
