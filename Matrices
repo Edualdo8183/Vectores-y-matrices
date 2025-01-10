@@ -1,1 +1,4 @@
-EE
+import numpy as np
+
+def es_identidad_con_numpy(matriz):
+    return np.array_equal(matriz, np.eye(len(matriz))) 
