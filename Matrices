@@ -1,23 +1,43 @@
 Primer ejercicio 
-Sin numpty 
-def es_matriz_identidad(matriz):
-    if len(matriz) != len(matriz[0]):
-        return False
-    for i in range(len(matriz)):
-        for j in range(len(matriz[i])):
-            if (i == j and matriz[i][j] != 1) or (i != j and matriz[i][j] != 0):
-                return False
-    return True
-
-Con numpty 
 import numpy as np
 
 def es_matriz_identidad(matriz):
-    matriz = np.array(matriz)
-    if matriz.shape[0] != matriz.shape[1]:
+    filas, columnas = matriz.shape
+    if filas != columnas:
         return False
-    identidad = np.eye(matriz.shape[0])
-    return np.array_equal(matriz, identidad)
+    for i in range(filas):
+        for j in range(columnas):
+            if i == j and matriz[i, j] != 1:
+                return False
+            elif i != j and matriz[i, j] != 0:
+                return False
+    return True
+
+matriz = np.array([[1, 0, 0], [0, 1, 0], [0, 0, 1]])
+if es_matriz_identidad(matriz):
+    print("La matriz es identidad.")
+else:
+    print("La matriz no es identidad.")
+
+AHORA HAZ SIN NUMPTY
+def es_matriz_identidad(matriz):
+    filas = len(matriz)
+    columnas = len(matriz[0])
+    if filas != columnas:
+        return False
+    for i in range(filas):
+        for j in range(columnas):
+            if i == j and matriz[i][j] != 1:
+                return False
+            elif i != j and matriz[i][j] != 0:
+                return False
+    return True
+
+matriz = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
+if es_matriz_identidad(matriz):
+    print("La matriz es identidad.")
+else:
+    print("La matriz no es identidad.")
 
 Segundo ejercicio:
 import numpy as np
