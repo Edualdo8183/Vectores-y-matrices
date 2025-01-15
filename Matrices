@@ -61,3 +61,17 @@ media = np.mean(A)
 desviacion = np.std(A)
 suma = np.sum(A)
 print(media, desviacion, suma) 
+
+Quinto ejercicio:
+import numpy as np
+
+filas = int(input("Ingrese el número de filas: "))
+columnas = int(input("Ingrese el número de columnas: "))
+
+print("Ingrese los valores de la primera matriz:")
+matriz1 = np.array([[int(input()) for _ in range(columnas)] for _ in range(filas)])
+
+print("Ingrese los valores de la segunda matriz:")
+matriz2 = np.array([[int(input()) for _ in range(columnas)] for _ in range(filas)])
+
+print(matriz1 == matriz2) 
