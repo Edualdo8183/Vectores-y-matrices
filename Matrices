@@ -136,3 +136,8 @@ if A.shape[1] == V.shape[0]:
     print(R)
 else:
     print("Dimensiones incompatibles") 
+
+Undecimo ejercicio:
+A = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+traspuesta = [[A[j][i] for j in range(len(A))] for i in range(len(A[0]))]
+print(traspuesta) 
