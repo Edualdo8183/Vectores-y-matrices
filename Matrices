@@ -74,4 +74,12 @@ matriz1 = np.array([[int(input()) for _ in range(columnas)] for _ in range(filas
 print("Ingrese los valores de la segunda matriz:")
 matriz2 = np.array([[int(input()) for _ in range(columnas)] for _ in range(filas)])
 
-print(matriz1 == matriz2) 
+print(matriz1 == matriz2)
+
+Sexto ejercicio:
+import numpy as np
+matriz = np.array([[1, 2], [3, 4]])
+inversa = np.linalg.inv(matriz)
+determinante = np.linalg.det(matriz)
+print(inversa)
+print(determinante) 
