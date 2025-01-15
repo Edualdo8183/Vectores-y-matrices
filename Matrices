@@ -19,7 +19,7 @@ if es_matriz_identidad(matriz):
 else:
     print("La matriz no es identidad.")
 
-AHORA HAZ SIN NUMPTY
+Sin numpty
 def es_matriz_identidad(matriz):
     filas = len(matriz)
     columnas = len(matriz[0])
