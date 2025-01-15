@@ -104,3 +104,15 @@ print("\nConcatenación por filas:")
 print(concat_filas)
 print("\nConcatenación por columnas:")
 print(concat_columnas
+
+Octavo ejercicio:
+import numpy as np
+
+x = [1, 2, 3, 4, 5]
+y = [5, 4, 6, 7, 8]
+
+covarianza = np.cov(x, y)[0][1]
+correlacion = np.corrcoef(x, y)[0][1]
+
+print(covarianza)
+print(correlacion)
