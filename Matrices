@@ -88,7 +88,7 @@ print(determinante)
 Septimp ejercicio:
 import numpy as np
 
-print("Introduce los elementos de la matriz A (en filas separadas por comas y elementos por espacios):")
+print("Introduce los elementos de la matriz A (filas separadas por comas y elementos por espacios):")
 A = np.array([list(map(int, input(f"Fila {i+1}: ").split())) for i in range(2)])
 
 print("\nIntroduce los elementos de la matriz B (en filas separadas por comas y elementos por espacios):")
@@ -136,7 +136,7 @@ if A.shape[1] == V.shape[0]:
     R = np.dot(A, V)
     print(R)
 else:
-    print("Dimensiones incompatibles") 
+    print("Imcompatible") 
 
 Undecimo ejercicio:
 A = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
