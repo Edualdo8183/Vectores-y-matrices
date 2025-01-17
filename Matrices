@@ -98,14 +98,14 @@ print(determinante)
 Septimp ejercicio:
 import numpy as np
 
-print("Introduce los elementos de la matriz A (filas separadas por comas y elementos por espacios):")
-A = np.array([list(map(int, input(f"Fila {i+1}: ").split())) for i in range(2)])
+A = np.array([list(map(int, input(f"Introduce los elementos de la fila 1 de la matriz A separados por espacios: ").split())),
+              list(map(int, input(f"Introduce los elementos de la fila 2 de la matriz A separados por espacios: ").split()))])
 
-print("\nIntroduce los elementos de la matriz B (en filas separadas por comas y elementos por espacios):")
-B = np.array([list(map(int, input(f"Fila {i+1}: ").split())) for i in range(2)])
+B = np.array([list(map(int, input(f"Introduce los elementos de la fila 1 de la matriz B separados por espacios: ").split())),
+              list(map(int, input(f"Introduce los elementos de la fila 2 de la matriz B separados por espacios: ").split()))])
 
-concat_filas = np.concatenate((A, B), axis=0)
-concat_columnas = np.concatenate((A, B), axis=1)
+concat_filas = np.vstack((A, B))
+concat_columnas = np.hstack((A, B))
 
 print("\nMatriz A:")
 print(A)
@@ -114,7 +114,8 @@ print(B)
 print("\nConcatenación por filas:")
 print(concat_filas)
 print("\nConcatenación por columnas:")
-print(concat_columnas
+print(concat_columnas)
+
 
 Octavo ejercicio:
 import numpy as np
