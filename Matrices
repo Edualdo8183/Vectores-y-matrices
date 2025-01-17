@@ -56,25 +56,26 @@ print(C)
 Cuarto ejercicio:
 import numpy as np
 
-A = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
-media = np.mean(A)
-desviacion = np.std(A)
-suma = np.sum(A)
-print(media, desviacion, suma) 
-
-Quinto ejercicio:
-import numpy as np
-
 filas = int(input("Ingrese el número de filas: "))
-columnas = int(input("Ingrese el número de columnas: "))
+columnas = int(input("Ingrese el número de columnas(Tienes que ingresar valor por valor: "))
 
-print("Ingrese los valores de la primera matriz:")
-matriz1 = np.array([[int(input()) for _ in range(columnas)] for _ in range(filas)])
+if filas > 0 and columnas > 0:
+    def ingresar_matriz(filas, columnas):
+        return np.array([[int(input()) for _ in range(columnas)] for _ in range(filas)])
 
-print("Ingrese los valores de la segunda matriz:")
-matriz2 = np.array([[int(input()) for _ in range(columnas)] for _ in range(filas)])
+    matriz1 = ingresar_matriz(filas, columnas)
+    matriz2 = ingresar_matriz(filas, columnas)
 
-print(matriz1 == matriz2)
+    print(matriz1)
+    print(matriz2)
+
+    if np.array_equal(matriz1, matriz2):
+        print("Las matrices son iguales.")
+    else:
+        print("Las matrices son diferentes.")
+else:
+    print("El número de filas y columnas debe ser mayor que 0.")
+
 
 Sexto ejercicio:
 import numpy as np
@@ -128,8 +129,8 @@ for fila in C:
 Decimo ejercicio:
 import numpy as np
 
-A = np.array([[1, 2], [3, 4], [5, 6]])  # Matriz de ejemplo
-V = np.array([1, 2])  # Vector de ejemplo
+A = np.array([[1, 2], [3, 4], [5, 6]]) 
+V = np.array([1, 2]) 
 
 if A.shape[1] == V.shape[0]:
     R = np.dot(A, V)
