@@ -157,14 +157,17 @@ print(traspuesta)
 Ejercicio de prueba 
 import numpy as np
 
-inventario = np.array([
-    [10, 20],
-    [15, 30],
-    [5, 50]
-])
+filas = int(input("Ingrese el número de productos: "))
+inventario = []
 
+for i in range(filas):
+    precio = float(input(f"Ingrese el precio por unidad del producto {i + 1}: "))
+    cantidad = int(input(f"Ingrese la cantidad en stock del producto {i + 1}: "))
+    inventario.append([precio, cantidad])
+
+inventario = np.array(inventario)
 valores_por_producto = inventario[:, 0] * inventario[:, 1]
 valor_total = np.sum(valores_por_producto)
 
 print(valores_por_producto)
-print(valor_total) 
+print(valor_total)
