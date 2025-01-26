@@ -15,3 +15,26 @@ valor_total = np.sum(valores_por_producto)
 
 print(valores_por_producto)
 print(valor_total)
+
+Ejercicio 2:
+import numpy as np
+
+filas = int(input("Ingrese el número de tiendas: "))
+columnas = int(input("Ingrese el número de días: "))
+
+ventas = []
+for i in range(filas):
+    print(f"Ingrese las ventas para la tienda {i + 1} (separadas por espacio):")
+    fila = list(map(int, input().split()))
+    ventas.append(fila)
+
+matriz_ventas = np.array(ventas)
+ventas_por_tienda = np.sum(matriz_ventas, axis=1)
+indice_mayor_tienda = np.argmax(ventas_por_tienda)
+ventas_por_dia = np.sum(matriz_ventas, axis=0)
+indice_mayor_dia = np.argmax(ventas_por_dia)
+
+print("\nResultados:")
+print("Ventas totales por tienda:", ventas_por_tienda.tolist())
+print(f"La tienda con mayores ventas es la tienda {indice_mayor_tienda + 1} (índice {indice_mayor_tienda}).")
+print(f"El día con mayores ventas es el día {indice_mayor_dia + 1} (índice {indice_mayor_dia}).")
