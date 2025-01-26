@@ -40,3 +40,26 @@ print(f"La tienda con mayores ventas es la tienda {indice_mayor_tienda + 1} (ín
 print(f"El día con mayores ventas es el día {indice_mayor_dia + 1} (índice {indice_mayor_dia}).")
 
 Ejercicio 3:
+import numpy as np
+
+n = int(input("¿Cuántos productos deseas ingresar? "))
+
+datos = []
+
+for i in range(n):
+    precio = float(input(f"Ingrese el precio del producto {i + 1}: "))
+    descuento = float(input(f"Ingrese el descuento (%) del producto {i + 1}: "))
+    datos.append([precio, descuento])
+
+precios = np.array(datos)
+precios_finales = precios[:, 0] * (1 - precios[:, 1] / 100)
+
+print("Finales =", precios_finales.tolist())
+
+Ejercicio 4:
+
+
+Ejercicio 5:
+
+
+Ejercicio 6:
