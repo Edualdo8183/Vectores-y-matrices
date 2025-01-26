@@ -57,6 +57,29 @@ precios_finales = precios[:, 0] * (1 - precios[:, 1] / 100)
 print("Finales =", precios_finales.tolist())
 
 Ejercicio 4:
+import numpy as np
+
+filas = int(input("Ingresa el número de sucursales: "))
+columnas = int(input("Ingresa el número de trimestres: "))
+
+ganancias = []
+for i in range(filas):
+    fila = list(map(int, input(f"Sucursal {i+1}: ").split()))
+    while len(fila) != columnas:
+        print(f"Debes ingresar exactamente {columnas} valores.")
+        fila = list(map(int, input(f"Sucursal {i+1}: ").split()))
+    ganancias.append(fila)
+
+ganancias = np.array(ganancias)
+
+totales_anuales = np.sum(ganancias, axis=1)
+totales_trimestre = np.sum(ganancias, axis=0)
+indice_mayor_ganancia = np.argmax(totales_anuales) + 1
+
+print("\nResultados:")
+print("Totales anuales:", totales_anuales)
+print("Totales por trimestre:", totales_trimestre)
+print("Sucursal con mayores ganancias:", indice_mayor_ganancia) 
 
 
 Ejercicio 5:
