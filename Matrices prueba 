@@ -38,3 +38,5 @@ print("\nResultados:")
 print("Ventas totales por tienda:", ventas_por_tienda.tolist())
 print(f"La tienda con mayores ventas es la tienda {indice_mayor_tienda + 1} (índice {indice_mayor_tienda}).")
 print(f"El día con mayores ventas es el día {indice_mayor_dia + 1} (índice {indice_mayor_dia}).")
+
+Ejercicio 3:
