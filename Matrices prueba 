@@ -83,6 +83,24 @@ print("Sucursal con mayores ganancias:", indice_mayor_ganancia)
 
 
 Ejercicio 5:
+import numpy as np
+
+num_vendedores = int(input("Número de vendedores: "))
+num_meses = int(input("Número de meses: "))
+
+ventas = np.zeros((num_vendedores, num_meses))
+
+for i in range(num_vendedores):
+    for j in range(num_meses):
+        ventas[i, j] = float(input(f"Ventas del vendedor {i+1}, mes {j+1}: "))
+
+comisiones = ventas * 0.1
+comisiones_totales = np.sum(comisiones, axis=1)
+indice_mayor = np.argmax(comisiones_totales)
+
+print("\nVentas:\n", ventas)
+print("\nComisiones:\n", comisiones)
+print("\nVendedor con mayores comisiones:", indice_mayor + 1)
 
 
 Ejercicio 6:
