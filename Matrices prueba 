@@ -104,3 +104,20 @@ print("\nVendedor con mayores comisiones:", indice_mayor + 1)
 
 
 Ejercicio 6:
+import numpy as np
+
+filas = int(input("Ingrese el número de filas: "))
+columnas = int(input("Ingrese el número de columnas: "))
+
+precios = []
+print("Ingrese los datos de la matriz fila por fila, separados por espacios:")
+for i in range(filas):
+    fila = list(map(float, input(f"Fila {i + 1}: ").split()))
+    precios.append(fila)
+
+precios = np.array(precios)
+ultima_columna = precios[:, -1]
+futuros = ultima_columna * 1.05
+
+print(f"\nMatriz de precios históricos:\n{precios}")
+print(f"Precios futuros esperados: {futuros}")
